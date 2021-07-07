@@ -16,8 +16,11 @@ struct Country: Decodable {
 
 class ViewController: UIViewController {
     
+    // внешние зависимости
     let urlString = "https://raw.githubusercontent.com/Softex-Group/task-mobile/master/test.json"
-    
+    var networkService = NetworkService()
+    let dataStore = DataStore()
+
     // MARK: - IBOutlets
     
     @IBOutlet weak var myTextField: UITextField!
@@ -30,7 +33,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
-        dataFetcher()
+        //dataFetcher()
+        networkService.dataFetcher(urlString: urlString)
     }
 
     // MARK: - Business logic
@@ -41,42 +45,9 @@ class ViewController: UIViewController {
             showAlert()
             return
         }
+        dataStore.saveNameInCashe(name: name)
     }
-    
-    // MARK: - Data storage
-    
-    // сохранение данных в кеш (базу данных)
-    func saveNameInCashe(name: String) {
-        print("Your name: \(name) is saved")
-    }
-    
-    // получение данных из кеша (базы данных)
-    func getNameFromCache() -> String {
-        return "some name"
-    }
-    
-    // MARK: - Networking
-    
-    func dataFetcher() {
-        request { data, error in
-            let decoder = JSONDecoder()
-            guard let data = data else { return }
-            let response = try? decoder.decode([Country].self, from: data)
-            print(response)
-        }
-    }
-    
-    func request(completion: @escaping (Data?, Error?) -> Void) {
-        guard let url = URL(string: urlString) else { return }
-        let request = URLRequest(url: url)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            DispatchQueue.main.async {
-                completion(data, error)
-            }
-        }
-        task.resume()
-    }
-    
+          
     // MARK: - User interface
     
     // отображение интерфейса

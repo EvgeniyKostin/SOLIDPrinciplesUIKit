@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE9895B42695F5AA00431370 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9895B32695F5AA00431370 /* NetworkService.swift */; };
+		FE9895B62695F7D600431370 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9895B52695F7D600431370 /* DataStore.swift */; };
 		FECB8FFB2691B12100DA0B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB8FFA2691B12100DA0B76 /* AppDelegate.swift */; };
 		FECB8FFD2691B12100DA0B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB8FFC2691B12100DA0B76 /* SceneDelegate.swift */; };
 		FECB8FFF2691B12100DA0B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB8FFE2691B12100DA0B76 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE9895B32695F5AA00431370 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FE9895B52695F7D600431370 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		FECB8FF72691B12100DA0B76 /* SOLIDPrinciplesUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOLIDPrinciplesUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECB8FFA2691B12100DA0B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FECB8FFC2691B12100DA0B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				FECB8FFA2691B12100DA0B76 /* AppDelegate.swift */,
 				FECB8FFC2691B12100DA0B76 /* SceneDelegate.swift */,
 				FECB8FFE2691B12100DA0B76 /* ViewController.swift */,
+				FE9895B52695F7D600431370 /* DataStore.swift */,
+				FE9895B32695F5AA00431370 /* NetworkService.swift */,
 				FECB90002691B12100DA0B76 /* Main.storyboard */,
 				FECB90032691B12800DA0B76 /* Assets.xcassets */,
 				FECB90052691B12800DA0B76 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				FECB8FFF2691B12100DA0B76 /* ViewController.swift in Sources */,
 				FECB8FFB2691B12100DA0B76 /* AppDelegate.swift in Sources */,
+				FE9895B42695F5AA00431370 /* NetworkService.swift in Sources */,
+				FE9895B62695F7D600431370 /* DataStore.swift in Sources */,
 				FECB8FFD2691B12100DA0B76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
